@@ -25,6 +25,6 @@ if __name__ == '__main__':
     s_new = mutate_string(s, int(i), c)
     print(s_new)
 
-'''abracadabra'''
+'''Input: abracadabra'''
 '''change at index 5 to character k'''
-'''Time & Space Complexity: 0(n) linear '''
+'''Time & Space Complexity: 0(n) linear - means that the alogrithims execution time grows linearly with the size of the input. As the input size increases, the algorithims running time will increase proportionally '''
