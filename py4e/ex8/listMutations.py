@@ -1,10 +1,10 @@
 fname = input("Enter file name: ")
 fh = open(fname)
-# unique_words = []
+unique_words = []
 for line in fh:
     print(line)
     word_list = line.split()
-# print(word_list)
+print(word_list)
 
 
 # for line in words_list:
@@ -12,3 +12,7 @@ for line in fh:
 #         unique_words.append(line)
 # unique_words.sort()
 # print(unique_words)
+
+
+# stuff = dict()
+# print(stuff.get('candy', -1))
