@@ -7,18 +7,19 @@ def timeConversion(s):
     hour = int(s[:2])  # First two characters are the hour
     minute = s[3:5]    # Characters 3-4 are the minute
     second = s[6:8]    # Characters 6-7 are the second
-    period = s[8:]
+    period = s[8:]     # Characters 8 onwards are AM/PM
 
-    if period == "AM":
-        if hour == 12:
+    if period == "PM":
+        if hour != 12:
             hour += 12
     elif period == "AM":
-        hour = 0
+        if hour == 12:
+            hour = 0
 
-    return f"{hour:00}:{minute}:{second}"
+    return f"{hour:02}:{minute}:{second}"
 
 
-if __name__ == __main__:
-    s = input()
+if __name__ == "__main__":
+    s = input("Enter time in 12-hour format (e.g., 07:05:45PM): ")
     result = timeConversion(s)
-    print(result)
+    print("Converted time in 24-hour format:", result)
